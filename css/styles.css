@@ -12,6 +12,12 @@ body {
     color: #fff;
 }
 
+.wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 h1 {
     text-align: center;
     margin: 100px auto 50px;
@@ -26,7 +32,7 @@ h1 {
     background: #117394;
     display: flex;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 50px;
 }
 
 #searchForm #searchBox {
@@ -37,20 +43,26 @@ h1 {
     background: transparent;
     color: #fff;
     font-size: 18px;
-    padding: 0 30px;
+    padding: 0 0 0 30px;
     border-radius: 8px 0 0 8px;
 }
 
 #searchForm button {
-    padding: 0 40px;
-    height: 100%;
+    margin-right: 15px;
+    /* padding: 0 40px; */
+    height: 50px;
+    width: 50px;
     background: #374857;
     color: #fff;
     font-size: 18px;
     border: 0;
     outline: 0;
-    border-radius: 0 8px 8px 0;
+    border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
 }
 
 ::placeholder {
@@ -83,4 +95,15 @@ h1 {
     height: 230px;
     object-fit: cover;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 550px) {
+    .wrapper {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    #searchResult {
+        grid-template-columns: 1fr;
+    }
 }
